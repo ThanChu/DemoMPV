@@ -12,7 +12,7 @@ public class ApiClient {
 
     public static final ApiClient INSTANCE = new ApiClient();
     private static final Retrofit restAdapter = new Retrofit.Builder()
-            .baseUrl("http://10.88.96.36:8080/ty00/api/")
+            .baseUrl("http:")
             .build();
 
     private static final IApiClient service = restAdapter.create(IApiClient.class);
