@@ -1,36 +1,44 @@
 package vn.com.fsoft.three.team.demompv.network;
 
+import com.google.gson.JsonObject;
+import com.honda.messenger.ui.model.user.User;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
-import retrofit2.http.Field;
-import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface IApiClient {
 
     // Login
-    @FormUrlEncoded
+    @Headers("Content-Type: application/json")
     @POST("user/login")
-    Call<ResponseBody> login(@Field("username") String userId, @Field("password") String password, @Field("rememberMe") boolean rememberMe);
+    Call<ResponseBody> login(@Body JsonObject body);
 
     // Register
-    @FormUrlEncoded
+    @Headers("Content-Type: application/json")
     @POST("user")
-    Call<ResponseBody> register(@Field("username") String username, @Field("email") String email);
+    Call<ResponseBody> register(@Body JsonObject body);
 
     // Update Password
-    @FormUrlEncoded
+    @Headers("Content-Type: application/json")
     @POST("user/{userId}/password")
-    Call<ResponseBody> changePassword(@Path("userId") String userId, @Field("oldPassword") String oldPassword, @Field("newPassword") String newPassword);
+    Call<ResponseBody> changePassword(@Path("userId") String userId, @Body JsonObject body);
+
+    // Get User profile
+    @GET("user/identity")
+    Call<User> getUserProfile(@Query("access_token") String accessToken);
 
     // Get User details
     @GET("user/{userId}")
-    Call<ResponseBody> getUser(@Path("userId") String userId);
+    Call<User> getUserDetail(@Path("userId") String userId, @Query("access_token") String accessToken);
 
     // Join Meeting Room
-    @FormUrlEncoded
+    @Headers("Content-Type: application/json")
     @POST("room/join")
-    Call<ResponseBody> joinMeetingRoom(@Field("userId") String userId, @Field("roomKey") String roomKey);
+    Call<ResponseBody> joinMeetingRoom(@Body JsonObject body);
 }
