@@ -1,4 +1,4 @@
-package vn.com.fsoft.three.team.demompv.movie;
+package vn.com.demo.three.team.demompv.movie;
 
 import android.content.Context;
 

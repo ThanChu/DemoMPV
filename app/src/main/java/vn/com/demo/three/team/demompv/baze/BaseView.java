@@ -1,4 +1,4 @@
-package vn.com.fsoft.three.team.demompv.baze;
+package vn.com.demo.three.team.demompv.baze;
 
 /**
  * Created by ThanCV on 12/21/2016.

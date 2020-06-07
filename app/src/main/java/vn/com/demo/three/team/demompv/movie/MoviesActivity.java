@@ -1,4 +1,4 @@
-package vn.com.fsoft.three.team.demompv.movie;
+package vn.com.demo.three.team.demompv.movie;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,8 +14,8 @@ import com.datarepository.model.Movie;
 
 import java.util.List;
 
-import vn.com.fsoft.three.team.demompv.R;
-import vn.com.fsoft.three.team.demompv.baze.OnItemRecyclerClickListener;
+import vn.com.demo.three.team.demompv.R;
+import vn.com.demo.three.team.demompv.baze.OnItemRecyclerClickListener;
 
 public class MoviesActivity extends AppCompatActivity implements MoviesContract.IMoviesView, OnItemRecyclerClickListener {
 

@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="vn.com.fsoft.three.team.demompv.movie.MoviesActivity">
+    tools:context="vn.com.demo.three.team.demompv.movie.MoviesActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/movies_recyclerView"

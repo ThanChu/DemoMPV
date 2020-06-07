@@ -1,4 +1,4 @@
-package vn.com.fsoft.three.team.demompv.network.listener;
+package vn.com.demo.three.team.demompv.network.listener;
 
 public interface ApiClientCallback <T> {
 

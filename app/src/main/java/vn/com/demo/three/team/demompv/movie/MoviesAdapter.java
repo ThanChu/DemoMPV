@@ -1,4 +1,4 @@
-package vn.com.fsoft.three.team.demompv.movie;
+package vn.com.demo.three.team.demompv.movie;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -15,8 +15,8 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-import vn.com.fsoft.three.team.demompv.R;
-import vn.com.fsoft.three.team.demompv.baze.OnItemRecyclerClickListener;
+import vn.com.demo.three.team.demompv.R;
+import vn.com.demo.three.team.demompv.baze.OnItemRecyclerClickListener;
 
 /**
  * Created by ThanCV on 12/21/2016.
